@@ -32,8 +32,6 @@ import java.lang.ref.WeakReference;
 public class MainActivity extends AppCompatActivity {
     private static final String MAINACTIVITY_TAG = MainActivity.class.getSimpleName();
     static private DatagramSocket ds = null;
-    private byte[] bytes;
-    private Button mdnsnabbyButton2;
     private TextView scrollwindow;
     private MyHandler myHandler;
 
@@ -44,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button mdnsdoorbellButton1 = (Button) findViewById(R.id.buttonMDNSdoorbell);//get id of button 1
-        mdnsnabbyButton2 = (Button) findViewById(R.id.buttonMDNSnabby);//get id of button 2
+        Button mdnsnabbyButton2 = (Button) findViewById(R.id.buttonMDNSnabby);//get id of button 2
         scrollwindow = findViewById(R.id.textView);
  //       scrollwindow.setMovementMethod(new ScrollingMovementMethod());
         scrollwindow.append("\n\nNabbyAbi started \n");
@@ -115,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
                 InetAddress address = InetAddress.getByName("192.168.23.103"); //103 (Nabby) of 160 (doorbell)
                 int port = 1235;
                 String s = "/inf\r";
-                bytes = s.getBytes("UTF-8");
+                byte[] bytes = s.getBytes("UTF-8");
                 DatagramPacket packet = new DatagramPacket(bytes, bytes.length, address, port);
                 ds.send(packet);
                 //      ds.close();
