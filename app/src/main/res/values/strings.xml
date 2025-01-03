@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">My Hello App</string>
+    <string name="mdns_scan_doorbell">MDNS scan doorbell</string>
+    <string name="mdns_scan_nabby">MDNS scan Nabby</string>
+    <string name="get_info">Get Info</string>
+    <string name="ring">Ring</string>
+    <string name="play">Play</string>
+    <string name="scroll_window">Scroll window</string>
+    <string name="nabby_conversation">Nabby conversation</string>
+</resources>
